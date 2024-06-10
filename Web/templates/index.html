@@ -2,11 +2,10 @@
 <html lang="en">
 
     <head>
-        <!-- meta data -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--font-family-->
+        <!-- font-family -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
         
         <!-- 웹브라우저 타이틀 -->
@@ -14,56 +13,38 @@
         <!-- For favicon png / 웹브라우저 파비콘(탭 등에 사용되는 작은 아이콘) -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/logo.jpg"/>
        
+		<!-- 웹 페이지 css -->
         <!--font-awesome.min.css-->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-        <!--linear icon css-->
-		<link rel="stylesheet" href="assets/css/linearicons.css">
-
 		<!--animate.css-->
         <link rel="stylesheet" href="assets/css/animate.css">
-
 		<!--flaticon.css-->
         <link rel="stylesheet" href="assets/css/flaticon.css">
-
-		<!--slick.css-->
-        <link rel="stylesheet" href="assets/css/slick.css">
-		<link rel="stylesheet" href="assets/css/slick-theme.css">
-		
         <!--bootstrap.min.css-->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
 		<!-- bootsnav -->
 		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
         <!--style.css-->
         <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
     </head>
 	
 	<body>
-		<!-- top-area Start -->
 		<section class="top-area">
 			<div class="header-area">
-				<!-- Start Navigation -->
 			    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
-
+					<!-- 네비게이션바 좌측상단 -->
 			        <div class="container">
-			            <!-- Start Header Navigation -->
 			            <div class="navbar-header">
 			                <a class="navbar-brand" href="#"><img src="./assets/logo/logo.jpg" style="display: inline; width: 30px; height: 30px;">Fine<span>Dust</span></a>
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
-
-			            <!-- Collect the nav links, forms, and other content for toggling -->
+			            </div>
+			            <!-- 네비게이션바 우측 선택부분 -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 			                    <li class="scroll active"><a href="#home">home</a></li>
 			                    <li class="scroll"><a href="#predict">Predict</a></li>
 			                    <li class="scroll"><a href="#data">Data</a></li>
 			                    <li class="scroll"><a href="#model">Model</a></li>
+								<!-- 분석부분 드롭다운 영역 -->
 								<li class="dropdown">
 									<a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Analysis</a>
 									<ul class="dropdown-menu">
@@ -72,17 +53,17 @@
 										<li ><a href="#">Social/Economy</a></li>
 									</ul>
 								</li>
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
-		</section><!-- /.top-area-->
+								<!-- 분석부분 드롭다운 영역 End -->
+			                </ul>
+			            </div>
+			        </div>
+			    </nav>
+			</div>
+		</section>
 		<!-- top-area End -->
 
-		<!--welcome-hero start -->
-		<!-- 배경 이미지 또는 영상 부분 -->
+		<!-- mainpage start -->
+		<!-- 배경 이미지 및 영상 부분 -->
 		<section id="home" class="welcome-hero">
 			<video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
 				<source src="assets/images/welcome-hero/finedust.mp4" type="video/mp4">
@@ -97,21 +78,21 @@
 						<h2>AND YOU?</h2>
 					</div>
 					<p>
-						Find Dust, Korea Weather, China Weather, West-Sea Weather, Mongolia Weather
+						Korea Fine Dust Predict with FineDust, Weather, Social&Economy data
 					</p>
 				</div>
 			</div>
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
+		</section>
+		<!--mainpage end -->
 
-		<!--works start -->
+		<!-- Predict 부분(미세먼지 예측 출력부분) -->
 		<section id="predict" class="works">
-			<div class="container" style="padding-top: 50px;">
+			<div class="container" style="padding-top: 20px;">
 				<div class="section-header">
 					<h1>Predict</h1>
-				</div><!--/.section-header-->
+				</div>
 
-				<!--list-topics start -->
+				<!-- 지역 리스트 -->
 				<section id="list-topics" class="list-topics">
 					<div class="container">
 						<div class="list-topics-content">
@@ -174,19 +155,21 @@
 								<div class="row" style="margin: 5px 10px 5px 5px;">
 									<div style="padding-bottom: 20px;">
 										<h>상태
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시간
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM10
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM25
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기온
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시간
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM10
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM25
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강수량
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기온
 										</h>
 									</div>
 									<div style="padding-bottom: 20px;">
 										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
 											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3mm
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
 										</h>
 										<br>
 									</div>
@@ -506,146 +489,15 @@
 		</div>
 		<!--works end -->
 
-		<!--explore start -->
+		<!-- data start -->
 		<section id="data" class="explore">
 			<div class="container">
 				<div class="section-header">
-					<h2>금일 Fine Dust</h2>
-					<p>Fine Dust 시간별 예측</p>
-				</div><!--/.section-header-->
-				<div class="explore-content">
+					<h1>Data</h1>
+					<p>사용 데이터 소개</p>
+				</div>
+				<div class="explore-data">
 					<div class="row">
-						
-						<div class=" col-md-4 col-sm-6">
-							<div class="single-explore-item">
-								<div class="row" style="margin: 5px 10px 10px 10px;">
-									<h2 style="display: flex; border-bottom: 1px solid #e1e5eb;">Time : 03:00</h2>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="single-explore-img">
-											<img src="assets/images/explore/e1.jpg" alt="explore image">
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12" style="justify-content: center; padding-top: 10px;">
-										<h3>PM10 : 12.6</h3>
-										<h3>PM2.5 : 2.6</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class=" col-md-4 col-sm-6">
-							<div class="single-explore-item">
-								<div class="row" style="margin: 5px 10px 10px 10px;">
-									<h2 style="display: flex; border-bottom: 1px solid #e1e5eb;">Time : 03:00</h2>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="single-explore-img">
-											<img src="assets/images/explore/e1.jpg" alt="explore image">
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12" style="justify-content: center; padding-top: 10px;">
-										<h3>PM10 : 12.6</h3>
-										<h3>PM2.5 : 2.6</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class=" col-md-4 col-sm-6">
-							<div class="single-explore-item">
-								<div class="row" style="margin: 5px 10px 10px 10px;">
-									<h2 style="display: flex; border-bottom: 1px solid #e1e5eb;">Time : 03:00</h2>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="single-explore-img">
-											<img src="assets/images/explore/e1.jpg" alt="explore image">
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12" style="justify-content: center; padding-top: 10px;">
-										<h3>PM10 : 12.6</h3>
-										<h3>PM2.5 : 2.6</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-
-						<div class=" col-md-3 col-sm-4">
-							<div class="single-explore-item">
-								<div class="row" style="margin: 5px 10px 10px 10px;">
-									<h2 style="display: flex; border-bottom: 1px solid #e1e5eb;">Time : 03:00</h2>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="single-explore-img">
-											<img src="assets/images/explore/e1.jpg" alt="explore image">
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12" style="justify-content: center; padding-top: 10px;">
-										<h3>PM10 : 12.6</h3>
-										<h3>PM2.5 : 2.6</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class=" col-md-3 col-sm-4">
-							<div class="single-explore-item">
-								<div class="row" style="margin: 5px 10px 10px 10px;">
-									<h2 style="display: flex; border-bottom: 1px solid #e1e5eb;">Time : 03:00</h2>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="single-explore-img">
-											<img src="assets/images/explore/e1.jpg" alt="explore image">
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12" style="justify-content: center; padding-top: 10px;">
-										<h3>PM10 : 12.6</h3>
-										<h3>PM2.5 : 2.6</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class=" col-md-3 col-sm-4">
-							<div class="single-explore-item">
-								<div class="row" style="margin: 5px 10px 10px 10px;">
-									<h2 style="display: flex; border-bottom: 1px solid #e1e5eb;">Time : 03:00</h2>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="single-explore-img">
-											<img src="assets/images/explore/e1.jpg" alt="explore image">
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12" style="justify-content: center; padding-top: 10px;">
-										<h3>PM10 : 12.6</h3>
-										<h3>PM2.5 : 2.6</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class=" col-md-3 col-sm-4">
-							<div class="single-explore-item">
-								<div class="row" style="margin: 5px 10px 10px 10px;">
-									<h2 style="display: flex; border-bottom: 1px solid #e1e5eb;">Time : 03:00</h2>
-								</div>
-								<div class="row">
-									<div class="col-md-6 col-sm-12">
-										<div class="single-explore-img">
-											<img src="assets/images/explore/e1.jpg" alt="explore image">
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12" style="justify-content: center; padding-top: 10px;">
-										<h3>PM10 : 12.6</h3>
-										<h3>PM2.5 : 2.6</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						
 						<div class=" col-md-3 col-sm-4">
 							<div class="single-explore-item">
 								<div class="single-explore-img">
@@ -753,17 +605,16 @@
 					</div>
 				</div>
 			</div><!--/.container-->
-
-		</section><!--/.explore-->
-		<!--explore end -->
+		</section>
+		<!--data end -->
 
 		<!--blog start -->
 		<section id="model" class="blog" >
 			<div class="container">
 				<div class="section-header">
-					<h2>news and articles</h2>
-					<p>Always upto date with our latest News and Articles </p>
-				</div><!--/.section-header-->
+					<h1>Model</h1>
+					<p>Description of the model used for prediction</p>
+				</div>
 				<div class="blog-content">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
@@ -810,8 +661,8 @@
 						</div>
 					</div>
 				</div>
-			</div><!--/.container-->
-		</section><!--/.blog-->
+			</div>
+		</section>
 		<!--blog end -->
 
 		<!--footer start-->
@@ -819,43 +670,32 @@
 			<div class="container">
 				<div class="hm-footer-copyright">
 					<div class="row">
-						<p style="text-align: center;">designed and developed by thensorcle</p>
+						<p style="text-align: center;">designed and developed by ten circle</p>
 					</div>
-				</div><!--/.hm-footer-copyright-->
-			</div><!--/.container-->
+				</div>
+			</div>
 
 			<!-- 우측 맨위로가기 버튼 -->
 			<div id="scroll-Top">
 				<div class="return-to-top">
 					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
 				</div>
-			</div><!--/.scroll-Top-->
-        </footer><!--/.footer-->
+			</div>
+        </footer>
 		<!--footer end-->
 		
+		<!-- 웹페이지 기본 js들 -->
 		<!-- Include all js compiled plugins (below), or include individual files as needed -->
 		<script src="assets/js/jquery.js"></script>
-        
         <!--modernizr.min.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
 		<!--bootstrap.min.js-->
         <script src="assets/js/bootstrap.min.js"></script>
-		
 		<!-- bootsnav js -->
 		<script src="assets/js/bootsnav.js"></script>
-
-        <!--feather.min.js-->
-        <script  src="assets/js/feather.min.js"></script>
-
-        <!-- counter js -->
-		<script src="assets/js/jquery.counterup.min.js"></script>
-		<script src="assets/js/waypoints.min.js"></script>
-
         <!--slick.min.js-->
         <script src="assets/js/slick.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		     
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>   
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
     </body>
