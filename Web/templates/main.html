@@ -35,7 +35,7 @@
 					<!-- 네비게이션바 좌측상단 -->
 			        <div class="container">
 			            <div class="navbar-header">
-			                <a class="navbar-brand" href="#"><img src="./assets/logo/logo.jpg" style="display: inline; width: 30px; height: 30px;">Fine<span>Dust</span></a>
+			                <a class="navbar-brand" href="#" style="font-size: 30px;"><img src="./assets/logo/logo3.png" style="display: inline; width: 60px; height: 60px;">TEN CIRCLE</a>
 			            </div>
 			            <!-- 네비게이션바 우측 선택부분 -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
@@ -65,29 +65,26 @@
 		<!-- mainpage start -->
 		<!-- 배경 이미지 및 영상 부분 -->
 		<section id="home" class="welcome-hero">
-			<video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+			<!-- <video preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
 				<source src="assets/images/welcome-hero/finedust.mp4" type="video/mp4">
 				Your browser does not support the video tag.
-			</video>
+			</video> -->
 			<div class="container">
 				<div class="welcome-hero-txt">
 					<div>
 						<h2 style="display: inline;">IM </h2>
-						<h2 style="display: inline; color: yellow;">FINE </h2>
+						<h2 style="display: inline; color: sandybrown">FINE </h2>
 						<h2 style="display: inline;">THANK YOU</h2>
 						<h2>AND YOU?</h2>
 					</div>
-					<p>
-						Korea Fine Dust Predict with FineDust, Weather, Social&Economy data
-					</p>
+					<p>Korea Fine Dust Predict with FineDust, Weather, Social&Economy data</p>
 				</div>
 			</div>
 		</section>
 		<!--mainpage end -->
 
 		<!-- Predict 부분(미세먼지 예측 출력부분) -->
-		<div id="predictpage" style="padding-top: 20px;"></div>
-		<section id="predict" class="works">
+		<section id="predict" class="works" style="padding-top: 30px;">
 			<div class="container">
 				<div class="section-header">
 					<h1>Predict</h1>
@@ -100,7 +97,8 @@
 						<div class="row" style="display: flex; justify-content: space-between;">
 							<div class="list-topics-content">
 								<ul>
-									<form method="get">
+									<!-- action추가로 해당위치에 머물면서 지역선택시 예측값만 바뀌게 적용 -->
+									<form method="get" action="#predict">
 										<li>
 											<button type="submit", name="loc", value="108">
 												<div class="single-list-topics-content">
@@ -167,8 +165,9 @@
 			</div><!--/.container-->
 		</section><!--/.works-->
 		
+		<!-- 3일간의 날씨정보 전달 -->
 		<section id="explore" class="explore">
-			<div class="container" style="width: 1500px;">
+			<div style="padding: 10px 200px;">
 				<div class="explore-content">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
@@ -184,18 +183,20 @@
 										<div class="col-md-2" style="text-align: center;"><h>기온</h></div>
 									</div>
 									<div style="padding-bottom: 25px;"></div>
+
+									<!-- 오늘 내일 모레 3일의 pred를 for문으로 출력 -->
 									{% for pred in pred1 %}
 									<div style="padding-top:10px; border-bottom: 1px solid #e1e5eb;">
 										<div style="padding-bottom: 10px; ">
 											<div class="col-md-2" style="text-align: center;">
 												{% if pred.pm10 <= 30 %}
-													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 80 %}
-													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 150 %}
-													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 80 %}
+													<img src="assets/images/emotion/normal.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 150 %}
+													<img src="assets/images/emotion/bad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% else %}
-													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/verybad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% endif %}
 											</div>
 											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
@@ -229,13 +230,13 @@
 										<div style="padding-bottom: 10px; ">
 											<div class="col-md-2" style="text-align: center;">
 												{% if pred.pm10 <= 30 %}
-													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 80 %}
-													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 150 %}
-													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 80 %}
+													<img src="assets/images/emotion/normal.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 150 %}
+													<img src="assets/images/emotion/bad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% else %}
-													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/verybad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% endif %}
 											</div>
 											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
@@ -269,13 +270,13 @@
 										<div style="padding-bottom: 10px; ">
 											<div class="col-md-2" style="text-align: center;">
 												{% if pred.pm10 <= 30 %}
-													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 80 %}
-													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 150 %}
-													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 80 %}
+													<img src="assets/images/emotion/normal.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 150 %}
+													<img src="assets/images/emotion/bad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% else %}
-													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/verybad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% endif %}
 											</div>
 											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
@@ -296,6 +297,7 @@
 			</div>
 		</section>
 
+		<!-- 분석 파트 -->
 		<div class="works-content">
 			<div class="row">
 				<div class="col-md-4 col-sm-6">
@@ -346,59 +348,52 @@
 
 		<!-- data start -->
 		<section id="data" class="explore">
-			<div class="container">
+			<div style="padding: 0 200px;">
 				<div class="section-header">
 					<h1>Data</h1>
-					<p>사용 데이터 소개</p>
+					<p>미세먼지 예측에 사용한 데이터</p>
 				</div>
+				<div style="padding-top: 10px;"></div>
 				<div class="explore-data">
 					<div class="row">
 						<div class=" col-md-3 col-sm-4">
-							<div class="single-explore-item">
+							<div class="single-data-item">
 								<div class="single-explore-img">
 									<img src="assets/images/explore/e1.jpg" alt="explore image">
 								</div>
 								<div class="single-explore-txt">
-									<h2><a href="#">tommy helfinger bar</a></h2>
-									<div class="explore-person">
-										<div class="row">
-											<div class="col-sm-2">
-												<div class="explore-person-img">
-													<a href="#">
-														<img src="assets/images/explore/person.png" alt="explore person">
-													</a>
-												</div>
-											</div>
-											<div class="col-sm-10">
-												<p>
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-												</p>
-											</div>
+									<h2>국내 & 해양 기상데이터</h2>
+									<div class="row">
+										<div class="col-sm-12">
+											<div style="padding-top: 10px;"></div>
+											<h3>국내 기상데이터</h3>
+											<p>출처 : 기상청자료개방포털</p>
+											<h3>해양 기상데이터</h3>
+											<p>출처 : 기상청자료개방포털</p>
+											<h3>국내 미세먼지데이터</h3>
+											<p><a href="https://airkorea.or.kr/web/" target="_blank">출처 : 에어코리아</a></p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4">
-							<div class="single-explore-item">
+							<div class="single-data-item">
 								<div class="single-explore-img">
 									<img src="assets/images/explore/e2.jpg" alt="explore image">
 								</div>
 								<div class="single-explore-txt">
-									<h2><a href="#">swim and dine resort</a></h2>
+									<h2>중국 & 몽골 기상데이터</h2>
 									<div class="explore-person">
 										<div class="row">
-											<div class="col-sm-2">
-												<div class="explore-person-img">
-													<a href="#">
-														<img src="assets/images/explore/person.png" alt="explore person">
-													</a>
-												</div>
-											</div>
-											<div class="col-sm-10">
-												<p>
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-												</p>
+											<div class="col-sm-12">
+												<div style="padding-top: 10px;"></div>
+												<h3>중국 기상데이터</h3>
+												<p>출처 : 기상청자료개방포털</p>
+												<h3>몽골 기상데이터</h3>
+												<p>출처 : 기상청자료개방포털</p>
+												<h3>중국 미세먼지데이터</h3>
+												<p><a href="https://aqicn.org/map/world/kr/" target="_blank">출처 : 세계 대기 질 지수 프로젝트</a></p>
 											</div>
 										</div>
 									</div>
@@ -406,25 +401,17 @@
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4">
-							<div class="single-explore-item">
+							<div class="single-data-item">
 								<div class="single-explore-img">
 									<img src="assets/images/explore/e3.jpg" alt="explore image">
 								</div>
 								<div class="single-explore-txt">
-									<h2><a href="#">europe tour</a></h2>
+									<h2>사회 & 경제 데이터</h2>
 									<div class="explore-person">
 										<div class="row">
-											<div class="col-sm-2">
-												<div class="explore-person-img">
-													<a href="#">
-														<img src="assets/images/explore/person.png" alt="explore person">
-													</a>
-												</div>
-											</div>
-											<div class="col-sm-10">
-												<p>
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-												</p>
+											<div class="col-sm-12">
+												<div style="padding-top: 10px;"></div>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... </p>
 											</div>
 										</div>
 									</div>
@@ -432,25 +419,17 @@
 							</div>
 						</div>
 						<div class="col-md-3 col-sm-4">
-							<div class="single-explore-item">
+							<div class="single-data-item">
 								<div class="single-explore-img">
 									<img src="assets/images/explore/e3.jpg" alt="explore image">
 								</div>
 								<div class="single-explore-txt">
-									<h2><a href="#">europe tour</a></h2>
+									<h2>에어로졸 데이터</h2>
 									<div class="explore-person">
 										<div class="row">
-											<div class="col-sm-2">
-												<div class="explore-person-img">
-													<a href="#">
-														<img src="assets/images/explore/person.png" alt="explore person">
-													</a>
-												</div>
-											</div>
-											<div class="col-sm-10">
-												<p>
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... 
-												</p>
+											<div class="col-sm-12">
+												<div style="padding-top: 10px;"></div>
+												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua.... </p>
 											</div>
 										</div>
 									</div>
