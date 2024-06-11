@@ -39,7 +39,7 @@ def main(request):
     # redirect_url = f"/?loc={loc}#predict"
     # return render(request, redirect_url)
 
-    return render(request, "index.html", context)
+    return render(request, "main.html", context)
 
 # def redi(request):
 #     loc = request.GET.get("loc", None)

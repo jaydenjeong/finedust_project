@@ -6,4 +6,5 @@ urlpatterns = [
     path("finedust/", views.finedust),
     path("social_economy/", views.social_economy),
     path("weather/", views.weather),
+    path("aerosol/", views.aerosol),
 ]

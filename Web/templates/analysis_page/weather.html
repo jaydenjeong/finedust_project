@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <h1> 기상 분석 페이지 </h1>
-    <body>
-        
-    </body>
+{% load static %}
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>기상 분석 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/fine_dust_analysis_style.css' %}" >
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- Begin Header -->
+  <div id="header"><h1>기상 분석 페이지</a></h1></div>
+  <!-- End Header -->
+  <!-- Begin Content -->
+  <div id="content"> 기상 분석 </div>
+  <!-- End Content -->
+  <!-- Begin Footer -->
+  <div id="content"> 미세먼지에 가장 영향력이 큰 피처는?(풍향/풍속) </div>
+  <div id="content"> 며칠 전까지의 데이터가 유효했는지? (5.5 ~ 6.5일) + 논문 소개 내용</div>
+  <div id="content"> - 강수량의 영향이 적음 </div>    
+  <div id="content"> - 기압의 영향력이 큼 </div>    
+  <div id="ft">
+    <a href = "/">
+        <div id="footer">
+            <h2>Back To Main</h2>
+        </div>
+    </a>
+  </div>
+  <!-- End Footer -->
+ </div>
+<!-- End Wrapper -->
+</body>
 </html>
