@@ -325,9 +325,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 --------------------------------------*/
 .list-topics-content {
     position: relative;
+    justify-content: space-between;
     z-index: 1;
 }
-.list-topics-content ul li { display: inline-block;}
+.list-topics-content ul li {display: inline-block;}
 
 .single-list-topics-content{
     display: flex;
@@ -338,8 +339,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     height: 120px;
     background:#fff;
     border-radius: 3px;
-    margin-right: 20px;
-    margin-bottom: 60px;
+    /* margin-right: 20px; */
     box-shadow: 0 0px 10px rgba(71,71,71,.2);
     -webkit-transition: .3s linear; 
     -moz-transition:.3s linear; 
