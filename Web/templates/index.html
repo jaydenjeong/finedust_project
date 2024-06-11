@@ -86,59 +86,81 @@
 		<!--mainpage end -->
 
 		<!-- Predict 부분(미세먼지 예측 출력부분) -->
+		<div id="predictpage" style="padding-top: 20px;"></div>
 		<section id="predict" class="works">
-			<div class="container" style="padding-top: 20px;">
+			<div class="container">
 				<div class="section-header">
 					<h1>Predict</h1>
 				</div>
 
 				<!-- 지역 리스트 -->
+				<!-- # 서울 : 108, 부산 : 159, 대전 : 133, 광주 : 156, 강릉 : 105 -->
 				<section id="list-topics" class="list-topics">
 					<div class="container">
-						<div class="list-topics-content">
-							<ul>
-								<li>
-									<div class="single-list-topics-content">
-										<div class="single-list-topics-icon">
-											<i class="flaticon-restaurant"></i>
-										</div>
-										<h2><a href="#">Seoul</a></h2>
-									</div>
-								</li>
-								<li>
-									<div class="single-list-topics-content">
-										<div class="single-list-topics-icon">
-											<i class="flaticon-travel"></i>
-										</div>
-										<h2><a href="#">Gangwon-do</a></h2>
-									</div>
-								</li>
-								<li>
-									<div class="single-list-topics-content">
-										<div class="single-list-topics-icon">
-											<i class="flaticon-building"></i>
-										</div>
-										<h2><a href="#">Chungcheong-do</a></h2>
-									</div>
-								</li>
-								<li>
-									<div class="single-list-topics-content">
-										<div class="single-list-topics-icon">
-											<i class="flaticon-pills"></i>
-										</div>
-										<h2><a href="#">Jeolla-do</a></h2>
-									</div>
-								</li>
-								<li>
-									<div class="single-list-topics-content">
-										<div class="single-list-topics-icon">
-											<i class="flaticon-transport"></i>
-										</div>
-										<h2><a href="#">Gyeongsang-do</a></h2>
-									</div>
-								</li>
-							</ul>
+						<div class="row" style="display: flex; justify-content: space-between;">
+							<div class="list-topics-content">
+								<ul>
+									<form method="get">
+										<li>
+											<button type="submit", name="loc", value="108">
+												<div class="single-list-topics-content">
+													<div class="single-list-topics-icon">
+														<i class="flaticon-restaurant"></i>
+													</div>
+													<h2><a>Seoul</a></h2>
+												</div>
+											</button>
+										</li>
+										<div style="display: inline; padding: 0 15px;"></div>
+										<li>
+											<button type="submit", name="loc", value="105">
+												<div class="single-list-topics-content">
+													<div class="single-list-topics-icon">
+														<i class="flaticon-travel"></i>
+													</div>
+													<h2><a>Gangwon-do</a></h2>
+												</div>
+											</button>
+										</li>
+										<div style="display: inline; padding: 0 15px;"></div>					
+										<li>
+											<button type="submit", name="loc", value="133">
+												<div class="single-list-topics-content">
+													<div class="single-list-topics-icon">
+														<i class="flaticon-building"></i>
+													</div>
+													<h2><a>Chungcheong-do</a></h2>
+												</div>
+											</button>
+										</li>
+										<div style="display: inline; padding: 0 15px;"></div>					
+										<li>
+											<button type="submit", name="loc", value="156">
+												<div class="single-list-topics-content">
+													<div class="single-list-topics-icon">
+														<i class="flaticon-pills"></i>
+													</div>
+													<h2><a>Jeolla-do</a></h2>
+												</div>
+											</button>
+										</li>
+										<div style="display: inline; padding: 0 15px;"></div>
+										<li>
+											<button type="submit", name="loc", value="159">
+												<div class="single-list-topics-content">
+													<div class="single-list-topics-icon">
+														<i class="flaticon-transport"></i>
+													</div>
+													<h2><a>Gyeongsang-do</a></h2>
+												</div>
+											</button>
+										</li>
+									</form>
+								</ul>
+							</div>
 						</div>
+						<!-- 지역선택 버튼과 예측값 출력부분의 경계 -->
+						<div style="padding-bottom: 70px;"></div>
 					</div><!--/.container-->
 				</section><!--/.list-topics-->
 				<!--list-topics end-->
@@ -146,7 +168,7 @@
 		</section><!--/.works-->
 		
 		<section id="explore" class="explore">
-			<div class="container" style="width: 1400px;">
+			<div class="container" style="width: 1500px;">
 				<div class="explore-content">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
@@ -154,95 +176,38 @@
 							<div class="single-explore-item">
 								<div class="row" style="margin: 5px 10px 5px 5px;">
 									<div style="padding-bottom: 20px;">
-										<h>상태
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시간
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM10
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM25
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;강수량
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기온
-										</h>
+										<div class="col-md-2" style="text-align: center;"><h>상태</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>시간</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>PM10</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>PM25</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>강수량</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>기온</h></div>
 									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3mm
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
+									<div style="padding-bottom: 25px;"></div>
+									{% for pred in pred1 %}
+									<div style="padding-top:10px; border-bottom: 1px solid #e1e5eb;">
+										<div style="padding-bottom: 10px; ">
+											<div class="col-md-2" style="text-align: center;">
+												{% if pred.pm10 <= 30 %}
+													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif status <= 80 %}
+													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif status <= 150 %}
+													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% else %}
+													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% endif %}
+											</div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.pm10 }}</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.pm25 }}</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.percipitation }}mm</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.temperature }}˚</h></div>
+											<h style="display: flex; border-bottom: 1px solid #e1e5eb;"></h>
+										</div>
 										<br>
 									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
+									{% endfor %}
 								</div>
 							</div>
 						</div>
@@ -251,93 +216,38 @@
 							<div class="single-explore-item">
 								<div class="row" style="margin: 5px 10px 5px 5px;">
 									<div style="padding-bottom: 20px;">
-										<h>상태
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시간
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM10
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM25
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기온
-										</h>
+										<div class="col-md-2" style="text-align: center;"><h>상태</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>시간</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>PM10</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>PM25</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>강수량</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>기온</h></div>
 									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
+									<div style="padding-bottom: 25px;"></div>
+									{% for pred in pred2 %}
+									<div style="padding-top:10px; border-bottom: 1px solid #e1e5eb;">
+										<div style="padding-bottom: 10px; ">
+											<div class="col-md-2" style="text-align: center;">
+												{% if pred.pm10 <= 30 %}
+													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif status <= 80 %}
+													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif status <= 150 %}
+													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% else %}
+													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% endif %}
+											</div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.pm10 }}</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.pm25 }}</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.percipitation }}mm</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.temperature }}˚</h></div>
+											<h style="display: flex; border-bottom: 1px solid #e1e5eb;"></h>
+										</div>
 										<br>
 									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
+									{% endfor %}
 								</div>
 							</div>
 						</div>
@@ -346,93 +256,38 @@
 							<div class="single-explore-item">
 								<div class="row" style="margin: 5px 10px 5px 5px;">
 									<div style="padding-bottom: 20px;">
-										<h>상태
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시간
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM10
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM25
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기온
-										</h>
+										<div class="col-md-2" style="text-align: center;"><h>상태</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>시간</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>PM10</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>PM25</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>강수량</h></div>
+										<div class="col-md-2" style="text-align: center;"><h>기온</h></div>
 									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
+									<div style="padding-bottom: 25px;"></div>
+									{% for pred in pred3 %}
+									<div style="padding-top:10px; border-bottom: 1px solid #e1e5eb;">
+										<div style="padding-bottom: 10px; ">
+											<div class="col-md-2" style="text-align: center;">
+												{% if pred.pm10 <= 30 %}
+													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif status <= 80 %}
+													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif status <= 150 %}
+													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% else %}
+													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% endif %}
+											</div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.pm10 }}</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.pm25 }}</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.percipitation }}mm</h></div>
+											<div class="col-md-2" style="text-align: center;"><h>{{ pred.temperature }}˚</h></div>
+											<h style="display: flex; border-bottom: 1px solid #e1e5eb;"></h>
+										</div>
 										<br>
 									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
-									<div style="padding-bottom: 20px;">
-										<h style="display: flex; border-bottom: 1px solid #e1e5eb; display: inline;">
-											<img src="assets/images/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03:00
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.6
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.4
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31˚
-										</h>
-										<br>
-									</div>
+									{% endfor %}
 								</div>
 							</div>
 						</div>
