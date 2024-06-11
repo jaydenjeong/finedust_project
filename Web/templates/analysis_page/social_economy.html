@@ -1,10 +1,9 @@
 {% load static %}
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>경제사회 분석 페이지</title>
+<title>사회경제 분석 페이지</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/fine_dust_analysis_style.css' %}" >
 </head>
@@ -12,24 +11,109 @@
 <!-- Begin Wrapper -->
 <div id="wrapper">
   <!-- Begin Header -->
-  <div id="header"><h1>경제사회 분석 페이지</a></h1></div>
+  <div id="header"><h1>사회경제 분석 페이지</a></h1></div>
   <!-- End Header -->
-  <!-- Begin Content -->
-  <div id="content"> 경제사회 분석 </div>
-  <!-- End Content -->
-  <!-- Begin Footer -->
-  <div id="content"> 전라도 운수 창고업 상관관계 - 미세먼지 영향 </div>
-  <div id="content"> 강원도의 광업 생산량 - 미세먼지 영향 </div>
-  <div id="content"> 중국의 단열 유리, 일반 유리 생산 - 미세먼지 영향 </div>
-  <div id="content"> 타이어 중요도, 타이어 생산량, 타이어 마모 - 미세먼지 영향 </div>
-  <div id="content"> 철광 관련 제품들의 생산량 - 미세먼지 영향 </div>
-  <div id="content"> 고급휘발유, 보통휘발유, 자동차용 경유 - 미세먼지 영향 </div>
-  <div id="content"> 실내 등유 - 미세먼지 영향 </div>
-  <div id="content"> 중국의 소금 생산 - 미세먼지 영향 </div>
-  <div id="content"> 중국의 아연 생산 - 미세먼지 영향 </div>
-  <div id="content"> 추가 분석 내용 </div>
+  <div id="intro"> 
+    <h1>중요 피처 선정</h1>
+    <p>서울, 부산, 광주, 대전, 강릉 지점에 대해서 RandomForest와 GradientBoost를 통해</p>
+    <p>feature_importance_를 각각 얻어, 총 10개의 중요도 리스트를 확보하였으며</p>
+    <p>10번의 중요도 리스트에서 약 상위 10%, 즉 상위 250등 내에 등장한 횟수를 집계한 후</p>
+    <p>등장한 횟수가 5회 이상인 사회 경제 지표의 경우 중요도가 높은 피처라고 판단, 분석을 진행하였다.</p>
+    <p>또한 종속변수 미세먼지와 각 중요 피처와의 상관계수를 산출하여 위의 판단과 분석을 보조하였다.</p>
+  </div>
+  <div id="content"> 
+    <h1>전라도 운수 창고업</h1>
+    <p>전라도의 운수 창고업은 각 중요도 리스트에 모두 포함되며 상관계수도 매우 높다.</p>
+    <p>전라도의 무역항을 찾아본 결과 목포항, 군산항, 여수항, 광양항이 있으며</p>
+    <p>지리적인 이유로 전라도의 무역항은 주된 교역 대상이 중국이라고 알려져 있다.</p>
+    <p>다음 기사에 따르면 군산항의 경우 23년도 화물의 15%가 중국 교역량으로 가장 많다.</p>
+    <a href="https://www.hankyung.com/article/202401298975Y">https://www.hankyung.com/article/202401298975Y</a>
+    <p>따라서 전라도의 운수 창고업은 중국과의 무역이 활발한 정도를 간접적으로 나타낼 수 있으며</p>
+    <p>중국의 산업 활성화 정도를 반영한 지표라고 분석하였다.</p>
+  </div>
+  <div id="content"> 
+    <h1>강원도의 광업 생산량</h1>
+    <p>강원도의 광업 생산량은 광물자원통계포털에서 월별 생산량을 확인할 수 있는데,</p>
+    <a href="https://www.kigam.re.kr/menu.es?mid=a30103010204">https://www.kigam.re.kr/menu.es?mid=a30103010204</a>
+    <p>전체 생산량의 약 95%가 석회석 생산량인 것을 확인할 수 있다.</p>
+    <p>석회석은 국내에서 유일하게 자급자족이 가능한 광물 자원으로 강원도와 경상북도 등에 매장량이 풍부한데</p>
+    <p>다음은 석회석 채굴공장에서 미세먼지가 발생된다는 내용의 기사이다.</p>
+    <a href="http://www.ombudsmannews.com/default/index_view_page.php?part_idx=4847&idx=9560">http://www.ombudsmannews.com/default/index_view_page.php?part_idx=4847&idx=9560</a>
+    <p>또한 석회석은 주로 시멘트를 제조하는데 사용되며 시멘트는 건설 현장에서 사용된다.</p>
+    <p>다음은 건설 현장과 건설 장비에서 발생한 미세먼지를 측정한 논문이다.</p>
+    <a href="https://www.jekosae.or.kr/xml/02729/02729.pdf">https://www.jekosae.or.kr/xml/02729/02729.pdf</a>
+  </div>
+  <div id="content"> 
+    <h1>중국의 유리 생산</h1>
+    <p>중국의 일반 유리, 단열 유리, 접합 유리 생산량은 한국의 미세먼지 농도와 관련이 큰데</p>
+    <p>유리 제조 공정에 대해서 알아본 결과 다음의 상관성을 찾을 수 있었다.</p>
+    <p>유리를 녹일 때 화석연료를 사용하게 되며 이 과정에서 대기오염물질이 발생한다는 연구 결과이며</p>
+    <a href="https://www.agc-glass.eu/en/sustainability/decarbonisation/environmental-impact">https://www.agc-glass.eu/en/sustainability/decarbonisation/environmental-impact</a>
+    <p>다음은 유리를 가공하는 과정에서도 미세한 유리 먼지가 발생하여 인체에 유해하다는 기사이다.</p>
+    <a href="https://www.pressian.com/pages/articles/106177">https://www.pressian.com/pages/articles/106177</a>
+  </div>
+  <div id="content"> 
+    <h1>중국의 철강 생산량</h1>
+    <p>한국의 미세먼지 농도와 관련이 있는 중국의 산업 생산량 부문 중에는</p>
+    <p>조강, 압엽강판, 철골 등의 철강 관련된 생산량 부문이 관련성이 높은 것으로 분석된다.</p>
+    <p>제철소의 경우 철광석을 정제하는 과정에서 이를 녹이기 때문에 화석연료, 주로 석탄을 소모하며</p>
+    <p>해당 과정에서 미세먼지와 대기오염물질이 발생하는 것으로 알려져 있다.</p>
+    <a href="https://www.idjnews.kr/news/articleView.html?idxno=137144">https://www.idjnews.kr/news/articleView.html?idxno=137144</a>
+  </div>
+  <div id="content">
+    <h1>중국의 아연 생산</h1>
+    <p>중국은 전 세계 아연 생산량의 1/3을 생산하는 아연 최대 생산국이다.</p>
+    <p>아연 매장량 역시 세계 최대 수준으로 아연 광석 생산량이 전세계의 36% 수준이다.</p>
+    <a href="https://dream.kotra.or.kr/kotranews/cms/news/actionKotraBoardDetail.do?SITE_NO=3&MENU_ID=180&CONTENTS_NO=1&bbsGbn=243&bbsSn=243&pNttSn=198741">https://dream.kotra.or.kr/...</a>
+    <p>다음은 아연 광산에서의 먼지 발생을 억제하고자 시도한 중국의 논문이며</p>
+    <a href="https://www.sciencedirect.com/science/article/abs/pii/S1003632607600661">https://www.sciencedirect.com/science/article/abs/pii/S1003632607600661</a>
+    <p>다음은 아연 광산과 아연 생산 과정에서 발생하는 환경 오염원에 대한 연구 보고서이다.</p>
+    <a href="https://www.greenspec.co.uk/building-design/zinc-production-environmental-impact/">https://www.greenspec.co.uk/building-design/zinc-production-environmental-impact/</a>
+    <p></p>
+  </div>
+  <div id="content"> 
+    <h1>국내 고급휘발유, 보통휘발유, 자동차용 경유, 실내 등유 가격</h1>
+    <p>고급/보통 휘발유, 경유 등은 자동차 주행과 관련이 깊으며 역시 화석연료 연소로 미세먼지가 발생한다.</p>
+    <p>다음의 기사는 내연기관과 후처리 장치의 발전으로 자동차에서 미세먼지 발생은 많이 줄었으나</p>
+    <p>노후된 경유차, 건설기계, 화물차 등이 여전히 미세먼지를 배출하고 있다는 내용이다.</p>
+    <a href="https://www.kaja.org/1458275600/?q=YToyOntzOjQ6InBhZ2UiO2k6MjtzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=2575075&t=board">https://www.kaja.org/1458275600/?q=YToyOntzOjQ6InBhZ2UiO2k6...</a>
+    <p>또한 소비될 때 뿐만 아니라 정유시설에서 생산될 때에도 미세먼지가 배출된다는 기사가 있다.</p>
+    <a href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=3292317">https://news.kbs.co.kr/news/pc/view/view.do?ncd=3292317</a>
+    <p>이는 자동차에서 사용되지 않는 실내 등유도 벗어날 수 없는 문제다.</p>
+  </div>
+  <div id="content"> 
+    <h1>중국의 타이어 생산량</h1>
+    <p>자동차는 주행하면서 화석연료를 소모하기 때문에 해당 과정에서 미세먼지를 발생시키지만</p>
+    <p>실제로는 주행중인 자동차에서 타이어가 마모되면서 발생하는 미세먼지의 비율이 압도적이라고 한다.</p>
+    <p>다음의 기사에 따르면 휘발유 자동차에서 발생한 미세먼지는 km당 42mg지만</p>
+    <a href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=5575028">https://news.kbs.co.kr/news/pc/view/view.do?ncd=5575028</a>
+    <p>그 중의 97%가 타이어 마모, 도로 마모, 브레이크 마모 등에서 발생했다고 한다.</p>
+    <p>심지어 전기차의 경우 배터리의 무게로 인해 오히려 미세먼지 배출량이 많다는 기사도 있다.</p>
+    <a href="https://www.newstof.com/news/articleView.html?idxno=12820">https://www.newstof.com/news/articleView.html?idxno=12820</a>
+  </div>
+  <div id="content">
+    <h1>중국의 소금 생산량</h1>
+    <p>중국의 소금 생산량은 의외로 한국의 미세먼지 농도를 예측하는데 있어 유의미한 피처였다.</p>
+    <p>한국에서는 소금이 주로 천일염을 통해서 생산되어 미세먼지와 관련성을 떠올리기 힘들지만</p>
+    <p>전세계적으로는 소금 광산에서 암염을 채굴해내는 것이 소금 생산량의 60% 이상이다.</p>
+    <p>중국 역시 암염을 주로 생산해내며 칭하이성 차이다무 분지에서 대부분을 생산하고 있다고 한다.</p>
+    <a href="https://www.hani.co.kr/arti/specialsection/esc_section/491372.html">https://www.hani.co.kr/arti/specialsection/esc_section/491372.html</a>
+    <p>암염 생산의 경우 광산이기 때문에 미세먼지가 발생하며 소금 광산에서는 소금 먼지가 발생하기도 한다.</p>
+    <a href="https://www.mdpi.com/1996-1073/15/21/8122">https://www.mdpi.com/1996-1073/15/21/8122</a>
+  </div>
+  <div id="content">
+    <h1>결론</h1>
+    <p>사회/경제 지표 관련 데이터는 현재 약 2500개의 피처 중 200개 내외의 수량이 포함되어 있으며</p>
+    <p>분석 결과 사회 경제 지표를 포함한 딥러닝 모델이 평균적으로 7.6% 낮은 오차값을 기록하였다.</p>
+    <br>
+    <p>다만 여러 한계점이 있었는데 대표적으로 중국 주가, 한국의 코스피 코스닥 지수 등은 관련성이 높았으나</p>
+    <p>상관관계 분석에 실패하였고 한국의 정보통신업, 도매소매업 역시 추측에 그칠 뿐이다.</p>
+    <br>
+    <p>또한 최종 예측 결과에는 이런 사회/경제 지표의 경우 일일 데이터를 실시간으로 확보할 수 없어</p>
+    <p>사용되지 못한 점이 다소 아쉬운 점이다.</p>
+  </div>
   <div id="ft">
-    <a href = "/">
+    <a href = "/#analysis">
         <div id="footer">
             <h2>Back To Main</h2>
         </div>
