@@ -9,3 +9,6 @@ def social_economy(request):
 
 def weather(request):
     return render(request, "analysis_page/weather.html")
+
+def aerosol(request):
+    return render(request, "analysis_page/aerosol.html")
