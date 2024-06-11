@@ -4,12 +4,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 def main(request):
-    loc = request.GET.get("loc", None)
+    loc = request.GET.get("loc", "108")
 
-    if loc:
-        predict = Predictions.objects.filter(loc = loc)
-    else:
-        predict = Predictions.objects.filter(loc = "108")
+    predict = Predictions.objects.filter(loc = loc)
 
     for pred in predict:
         if isinstance(pred.time, int):
@@ -36,15 +33,5 @@ def main(request):
         "pred2" : pred2,
         "pred3" : pred3,
     }
-    # redirect_url = f"/?loc={loc}#predict"
-    # return render(request, redirect_url)
 
-    return render(request, "index.html", context)
-
-# def redi(request):
-#     loc = request.GET.get("loc", None)
-
-#     redirect_url = reverse("finedust:main")
-#     if loc:
-#         redirect_url = f"/?loc={loc}#predict"
-#     return redirect(redirect_url)
+    return render(request, "main.html", context)

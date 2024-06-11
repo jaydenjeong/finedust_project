@@ -35,7 +35,7 @@
 					<!-- 네비게이션바 좌측상단 -->
 			        <div class="container">
 			            <div class="navbar-header">
-			                <a class="navbar-brand" href="#"><img src="./assets/logo/logo.jpg" style="display: inline; width: 30px; height: 30px;">Fine<span>Dust</span></a>
+			                <a class="navbar-brand" href="#" style="font-size: 30px;"><img src="./assets/logo/logo3.png" style="display: inline; width: 60px; height: 60px;">TEN CIRCLE</a>
 			            </div>
 			            <!-- 네비게이션바 우측 선택부분 -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
@@ -73,7 +73,7 @@
 				<div class="welcome-hero-txt">
 					<div>
 						<h2 style="display: inline;">IM </h2>
-						<h2 style="display: inline; color: yellow;">FINE </h2>
+						<h2 style="display: inline; color: sandybrown">FINE </h2>
 						<h2 style="display: inline;">THANK YOU</h2>
 						<h2>AND YOU?</h2>
 					</div>
@@ -86,8 +86,7 @@
 		<!--mainpage end -->
 
 		<!-- Predict 부분(미세먼지 예측 출력부분) -->
-		<div id="predictpage" style="padding-top: 20px;"></div>
-		<section id="predict" class="works">
+		<section id="predict" class="works" style="padding-top: 30px;">
 			<div class="container">
 				<div class="section-header">
 					<h1>Predict</h1>
@@ -100,7 +99,8 @@
 						<div class="row" style="display: flex; justify-content: space-between;">
 							<div class="list-topics-content">
 								<ul>
-									<form method="get">
+									<!-- action추가로 해당위치에 머물면서 지역선택시 예측값만 바뀌게 적용 -->
+									<form method="get" action="#predict">
 										<li>
 											<button type="submit", name="loc", value="108">
 												<div class="single-list-topics-content">
@@ -167,6 +167,7 @@
 			</div><!--/.container-->
 		</section><!--/.works-->
 		
+		<!-- 3일간의 날씨정보 전달 -->
 		<section id="explore" class="explore">
 			<div class="container" style="width: 1500px;">
 				<div class="explore-content">
@@ -184,18 +185,20 @@
 										<div class="col-md-2" style="text-align: center;"><h>기온</h></div>
 									</div>
 									<div style="padding-bottom: 25px;"></div>
+
+									<!-- 오늘 내일 모레 3일의 pred를 for문으로 출력 -->
 									{% for pred in pred1 %}
 									<div style="padding-top:10px; border-bottom: 1px solid #e1e5eb;">
 										<div style="padding-bottom: 10px; ">
 											<div class="col-md-2" style="text-align: center;">
 												{% if pred.pm10 <= 30 %}
-													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 80 %}
-													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 150 %}
-													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 80 %}
+													<img src="assets/images/emotion/normal.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 150 %}
+													<img src="assets/images/emotion/bad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% else %}
-													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/verybad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% endif %}
 											</div>
 											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
@@ -229,13 +232,13 @@
 										<div style="padding-bottom: 10px; ">
 											<div class="col-md-2" style="text-align: center;">
 												{% if pred.pm10 <= 30 %}
-													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 80 %}
-													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 150 %}
-													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 80 %}
+													<img src="assets/images/emotion/normal.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 150 %}
+													<img src="assets/images/emotion/bad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% else %}
-													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/verybad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% endif %}
 											</div>
 											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
@@ -269,13 +272,13 @@
 										<div style="padding-bottom: 10px; ">
 											<div class="col-md-2" style="text-align: center;">
 												{% if pred.pm10 <= 30 %}
-													<img src="assets/images/1.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 80 %}
-													<img src="assets/images/2.PNG" alt="explore image" style="width: 20px; height: 20px;">
-												{% elif status <= 150 %}
-													<img src="assets/images/3.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/good.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 80 %}
+													<img src="assets/images/emotion/normal.PNG" alt="explore image" style="width: 20px; height: 20px;">
+												{% elif pred.pm10 <= 150 %}
+													<img src="assets/images/emotion/bad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% else %}
-													<img src="assets/images/4.PNG" alt="explore image" style="width: 20px; height: 20px;">
+													<img src="assets/images/emotion/verybad.PNG" alt="explore image" style="width: 20px; height: 20px;">
 												{% endif %}
 											</div>
 											<div class="col-md-2" style="text-align: center;"><h>{{ pred.time }}:00</h></div>
@@ -296,6 +299,7 @@
 			</div>
 		</section>
 
+		<!-- 분석 파트 -->
 		<div class="works-content">
 			<div class="row">
 				<div class="col-md-4 col-sm-6">
