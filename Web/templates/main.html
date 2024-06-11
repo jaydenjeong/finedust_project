@@ -46,7 +46,7 @@
 			                    <li class="scroll"><a href="#model">Model</a></li>
 								<!-- 분석부분 드롭다운 영역 -->
 								<li class="dropdown">
-									<a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Analysis</a>
+									<a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#analysis">Analysis</a>
 									<ul class="dropdown-menu">
 										<li><a href="/analysis/finedust/">Finedust</a></li>
 										<li ><a href="/analysis/weather/">Weather</a></li>
@@ -81,6 +81,10 @@
 					<p>Korea Fine Dust Predict with FineDust, Weather, Social&Economy data</p>
 				</div>
 			</div>
+			<div class="home-txt">
+				<a href="/intro/team" style="margin-right: 100px;"><div class="home-txt-box"><h2>About us</h2></div></a>
+				<a href="/intro/project" style="margin-left: 100px;"><div class="home-txt-box"><h2>Project</h2></div></a>
+			</div>
 		</section>
 		<!--mainpage end -->
 
@@ -103,9 +107,7 @@
 										<li>
 											<button type="submit", name="loc", value="108">
 												<div class="single-list-topics-content">
-													<div class="single-list-topics-icon">
-														<i><img src="assets/logo/seoul_logo.png" width = 40px height = 40px></i>
-													</div>
+													<div><img src="assets/logo/seoul_logo.png" width = 40px height = 40px></div>
 													<h2><a>Seoul</a></h2>
 												</div>
 											</button>
@@ -114,9 +116,7 @@
 										<li>
 											<button type="submit", name="loc", value="105">
 												<div class="single-list-topics-content">
-													<div class="single-list-topics-icon">
-														<i><img src="assets/logo/Gangneung_logo.png" width = 40px height = 40px></i>
-													</div>
+													<div><img src="assets/logo/Gangneung_logo.png" width = 40px height = 40px></div>
 													<h2><a>Gangwon-do</a></h2>
 												</div>
 											</button>
@@ -125,9 +125,7 @@
 										<li>
 											<button type="submit", name="loc", value="133">
 												<div class="single-list-topics-content">
-													<div class="single-list-topics-icon">
-														<i><img src="assets/logo/Daejeon_logo.png" width = 40px height = 40px></i>
-													</div>
+													<div><img src="assets/logo/Daejeon_logo.png" width = 40px height = 40px></div>
 													<h2><a>Chungcheong-do</a></h2>
 												</div>
 											</button>
@@ -136,9 +134,7 @@
 										<li>
 											<button type="submit", name="loc", value="156">
 												<div class="single-list-topics-content">
-													<div class="single-list-topics-icon">
-														<i><img src="assets/logo/Gwangju_logo.png" width = 40px height = 40px></i>
-													</div>
+													<div><img src="assets/logo/Gwangju_logo.png" width = 40px height = 40px></div>
 													<h2><a>Jeolla-do</a></h2>
 												</div>
 											</button>
@@ -147,9 +143,7 @@
 										<li>
 											<button type="submit", name="loc", value="159">
 												<div class="single-list-topics-content">
-													<div class="single-list-topics-icon">
-														<i><img src="assets/logo/Busan_logo.png" width = 40px height = 40px></i>
-													</div>
+													<div><img src="assets/logo/Busan_logo.png" width = 40px height = 40px></div>
 													<h2><a>Gyeongsang-do</a></h2>
 												</div>
 											</button>
@@ -168,7 +162,8 @@
 		
 		<!-- 3일간의 날씨정보 전달 -->
 		<section id="explore" class="explore">
-			<div style="padding: 10px 200px;">
+			<div class="container" style="width: 1600px;">
+			<!-- <div style="padding: 10px 200px;"> -->
 				<div class="explore-content">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
@@ -297,72 +292,10 @@
 				</div>
 			</div>
 		</section>
-
-		<!-- 분석 파트 -->
-		<div class="works-content">
-			<div class="row">
-				<div class="col-md-3 col-sm-4">
-					<div class="single-how-works">
-						<div class=>
-							<i><img src="assets/images/analysis/finedust.png" width = 100px height = 100px></i>
-						</div>
-						<h2><a href="/analysis/finedust/"> 미세먼지분석 </a></h2>
-						<p>
-							Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
-						</p>
-						<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/finedust/'">
-							read more
-						</button>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="single-how-works">
-						<div class="single-how-works-icon">
-							<i class="flaticon-networking"></i>
-						</div>
-						<h2><a href="/analysis/weather/"> 기상분석 <span></a></h2>
-						<p>
-							Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
-						</p>
-						<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/weather/'">
-							read more
-						</button>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="single-how-works">
-						<div class="single-how-works-icon">
-							<i class="flaticon-location-on-road"></i>
-						</div>
-						<h2><a href="/analysis/social_economy/"> 경제 & 사회 분석 </a></h2>
-						<p>
-							Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
-						</p>
-						<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/social_economy/'">
-							read more
-						</button>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-4">
-					<div class="single-how-works">
-						<div class="single-how-works-icon">
-							<i class="flaticon-networking"></i>
-						</div>
-						<h2><a href="/analysis/aerosol/"> 에어로졸 광학두께 이미지 분석 <span></a></h2>
-						<p>
-							Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
-						</p>
-						<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/aerosol/'">
-							read more
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--works end -->
+		<!-- predict 파트 end -->
 
 		<!-- data start -->
-		<section id="data" class="explore">
+		<section id="data" class="work">
 			<div style="padding: 0 200px;">
 				<div class="section-header">
 					<h1>Data</h1>
@@ -458,7 +391,7 @@
 		<!--data end -->
 
 		<!--blog start -->
-		<section id="model" class="blog" >
+		<section id="model" class="explore" >
 			<div class="container">
 				<div class="section-header">
 					<h1>Model</h1>
@@ -513,6 +446,75 @@
 			</div>
 		</section>
 		<!--blog end -->
+
+		<!-- 분석 파트 -->
+		<section id="analysis" class="work" style="padding-bottom: 100px;">
+			<div class="section-header">
+				<h1 style="padding-top: 50px;">Analysis</h1>
+				<p>Analysis method</p>
+			</div>
+			<div class="works-content">
+				<div class="row" style="padding: 0 100px;">
+					<div class="col-md-3 col-sm-4">
+						<div class="single-how-works">
+							<div>
+								<i><img src="assets/images/analysis/finedust.png" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+							</div>
+							<h2><a href="/analysis/finedust/">미세먼지분석</a></h2>
+							<p>
+								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+							</p>
+							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/finedust/'">
+								read more
+							</button>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4">
+						<div class="single-how-works">
+							<div>
+								<i><img src="assets/images/analysis/weather.png" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+							</div>
+							<h2><a href="/analysis/weather/"> 기상분석</a></h2>
+							<p>
+								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+							</p>
+							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/weather/'">
+								read more
+							</button>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4">
+						<div class="single-how-works">
+							<div>
+								<i><img src="assets/images/analysis/economy_society.png" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+							</div>
+							<h2><a href="/analysis/social_economy/">경제 & 사회 분석</a></h2>
+							<p>
+								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+							</p>
+							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/social_economy/'">
+								read more
+							</button>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-4">
+						<div class="single-how-works">
+							<div>
+								<i><img src="assets/images/analysis/aerosol.gif" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+							</div>
+							<h2><a href="/analysis/aerosol/">에어로졸 광학두께 이미지 분석</a></h2>
+							<p>
+								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+							</p>
+							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/aerosol/'">
+								read more
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 분석파트 end -->
 
 		<!--footer start-->
 		<footer id="footer"  class="footer">
