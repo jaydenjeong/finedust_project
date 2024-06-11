@@ -376,6 +376,21 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     -o-transition:.3s linear;
     transition: .3s linear;
 }
+
+.img-content{
+    flex: 1;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.h-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .single-list-topics-content h2>a { margin: 0; font-size: 18px;}
 
 .single-list-topics-content:hover h2>a,.single-list-topics-content:hover p{color: #fff!important;}
@@ -489,6 +504,9 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .single-explore-img{
     position:relative;
     overflow: hidden;
+    width: 350px;
+    height: 240px;
+    border-radius: 5px;
 }
 .single-explore-img:before {
     position: absolute;
