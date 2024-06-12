@@ -32,6 +32,7 @@ def main(request):
         "pred1" : pred1,
         "pred2" : pred2,
         "pred3" : pred3,
+        "li" : li
     }
 
     return render(request, "main.html", context)
