@@ -12,21 +12,10 @@ color:#000000;
 text-align:center;
 font-family:Arial, Helvetica, sans-serif;
 font-size:1em;
+clear: both;
 }
 
 a{text-decoration:none; color:#000000;}
-
-blockquote {
-margin:1em;
-padding:.5em;
-background-color:#eeeeee;
-border-top:1px solid #cccccc;
-border-bottom:1px solid #cccccc;
-}
-
-blockquote p {
-margin:.2em;
-}
 
 #centerColumn {
 margin-top:2em;
@@ -38,11 +27,13 @@ padding:1em .5em 2em .5em;
 background:#FFFFFF;
 text-align:left;
 border:1px solid #999999;
+clear: both;
 }
 
 html>body #centerColumn {
 margin-left:6em;
 margin-right:6em;
+clear: both;
 }
 
 #centerColumn h2 {

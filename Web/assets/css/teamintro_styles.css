@@ -22,6 +22,18 @@ body {
 	margin:auto;text-align:left;
 	width:57.69em;min-width:750px;}
 
+.logo-container {
+	height: 200px; /* 로고 컨테이너의 높이 */
+	background-color: darkslategray;
+	background-image: url(../images/team/logo2.png); /* 배경 이미지 설정 */
+	background-size: contain; /* 배경 이미지를 요소에 맞게 크기 조정 */
+	background-repeat: no-repeat; /* 배경 이미지 반복 제거 */
+	background-position: center; /* 배경 이미지를 가운데 정렬 */
+	margin-bottom: 10px;
+	padding-left: 150px;
+	clear:both;
+}
+
 /* below required for all fluid grids; adjust widths and margins above accordingly */
 
 /* to preserve source-order independence for Gecko */
