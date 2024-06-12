@@ -25,6 +25,13 @@
   </div>
   <div id="content">
     <h1>미세먼지 예측에 가장 중요한 기상 데이터는 어떤 데이터인가?</h1>
+    <img src="{% static 'images/weather_analysis/wind.png' %}" width = 900px height = 120px>
+    <img src="{% static 'images/weather_analysis/nowind.png' %}" width = 900px height = 120px>
+    <p>위의 이미지는 풍향과 풍속만을 가지고 학습시킨 모델의 MSE 값이다.</p>
+    <p>아래의 이미지는 풍향과 풍속을 제외하고 학습시킨 모델의 MSE 값이다.</p>
+    <p>풍향/풍속이 있을 경우 모든 데이터를 포함한 모델 성능과 크게 차이가 나지 않으나</p>
+    <p>풍향/풍속이 없을 경우 MSE값이 10배 가까이 차이나는 것을 확인할 수 있다.</p>
+    <p>따라서 현재 미세먼지를 예측하는데 있어 가장 중요한 데이터는 풍향/풍속 데이터이다.</p>
   </div>
   <div id="content" style = "height: 630px"> 
     <h1>비가오면 정말 미세먼지가 씻겨나갈까?</h1>
