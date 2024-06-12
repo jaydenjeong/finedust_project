@@ -624,6 +624,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 
 .single-blog-item{
     margin-bottom: 30px;
+    height: 520px;
     box-shadow: 0 0px 5px rgba(71,71,71,.2);
     -webkit-transition: .3s; 
     -moz-transition:.3s; 
@@ -632,7 +633,11 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     transition: .3s;
 }
 .single-blog-item-txt {padding:  25px 28px 27px;}
-.single-blog-item-txt h2 a {text-transform:  initial;line-height: 1.8;}
+.single-blog-item-txt h2{
+    text-transform:  initial;
+    line-height: 1.8;
+    font-size: 24px;
+}
 .single-blog-item-txt h4 {
     font-size:  14px;
     color:  #8f949d;
