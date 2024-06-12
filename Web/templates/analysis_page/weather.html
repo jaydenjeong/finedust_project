@@ -6,33 +6,32 @@
 <head>
 <title>기상 분석 페이지</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="{% static 'css/fine_dust_analysis_style.css' %}" >
+<link rel="stylesheet" type="text/css" href="{% static 'css/weather_analysis_style.css' %}" >
 </head>
 <body>
 <!-- Begin Wrapper -->
 <div id="wrapper">
   <!-- Begin Header -->
   <div id="header"><h1>기상 분석 페이지</a></h1></div>
-  <!-- End Header -->
-  <!-- Begin Content -->
-  <div id="content"> 기상 분석 </div>
-  <!-- End Content -->
-  <!-- Begin Footer -->
-  <div id="content"> 며칠 전까지의 데이터가 유효했는지? (5.5 ~ 6.5일) + 논문 소개 내용</div>
-  <div id="content"> 미세먼지에 가장 영향력이 큰 피처는?(풍향/풍속) </div>
-  <!-- <div id="content", style="display: flex; align-items: center;"> 
-    <h1>강수량의 영향이 크다</h1>
-    <img src="{% static 'images/weather_analysis/percipitation.png' %}" width = 600px height = 300px>
-    <div>
-      <p>각 월별로 강수량</p>
-    </div>
-  </div> -->
-  <div id="content" style="display: flex; align-items: flex-start;">
-    <h1 style="margin-right: 20px;">강수량의 영향이 크다</h1>
-    <div style="display: flex; flex-direction: column;">
-        <img src="{% static 'images/weather_analysis/percipitation.png' %}" width="600px" height="300px" style="margin-bottom: 10px;">
-        <p>각 월별로 강수량</p>
-    </div>
+  <div id="content" style = "height: 550px"> 
+    <h1>예측에 사용할 데이터는 며칠이 적합한가?</h1>
+    <img src="{% static 'images/weather_analysis/time.png' %}" width = 400px height = 300px style="margin-right: 20px; margin-left:15px;">
+    <img src="{% static 'images/weather_analysis/steps.png' %}" width = 450px height = 300px>
+    <p>좌측의 표는 각 사막에서 황사가 한국에 도달하는데 필요한 시간이다.</p>
+    <p>미세먼지도 유사하다면 비슷한 기간을 예측하는데 사용할 수 있을 것이다.</p>
+    <p>우측의 그래프는 프로토타입 모델로 테스트 당시, 각 스텝별 (1 step = 3H) MSE값의 평균이다.</p>
+    <p>44 ~ 52 step일때 MSE의 평균값이 가장 낮았으며 그 이후로는 오차에 변화가 없었다.</p>
+    <p>따라서 최종적으로 48 step, 6일간의 데이터를 사용하여 미세먼지를 예측하기로 결정하였다.</p>
+  </div>
+  <div id="content">
+    <h1>미세먼지 예측에 가장 중요한 기상 데이터는 어떤 데이터인가?</h1>
+  </div>
+  <div id="content" style = "height: 630px"> 
+    <h1>비가오면 정말 미세먼지가 씻겨나갈까?</h1>
+    <img src="{% static 'images/weather_analysis/percipitation.png' %}" width = 900px height = 450px>
+    <p>각 월별로 강수 여부와 미세먼지 농도를 비교한 그래프이다.</p>
+    <p>차이가 큰 4월과 5월에는 2배 이상, 차이가 작은 12월에는 약 33% 차이가 발생한다.</p>
+    <p>비가 오는날에는 미세먼지 농도가 낮은 것이 확인되었다.</p>
   </div>
   <div id="ft">
     <a href = "/#analysis">
