@@ -87,6 +87,10 @@ letter-spacing:.1em;
     margin-bottom: 7px; /* 항목 간 간격 설정 */
 }
 
+.styled-list p{
+    font-size: 18px;
+}
+
 .styled-list ul ul {
     padding-left: 40px; /* 리스트 왼쪽 여백 설정 */
     font-size: 15px;
