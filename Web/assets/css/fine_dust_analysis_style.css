@@ -53,6 +53,12 @@ body {
     height: 350px;
    }
 
+#image-container {
+    text-align: center; /* 중앙 정렬 */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 #content h1 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -77,3 +83,4 @@ body {
  padding: 10px;
  text-align:center;
 }
+
