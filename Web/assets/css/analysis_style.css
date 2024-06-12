@@ -44,14 +44,21 @@ body {
 }
 
 #content { 
+    /* display: flex; */
+    flex-wrap: wrap;
     width: 900px;
     color: #333;
     border: 1px solid #ccc;
     background:lightgray;
     margin: 0px 0px 5px 0px;
     padding: 10px;
-    height: 500px;
    }
+
+#image-container {
+text-align: center; /* 중앙 정렬 */
+border-radius: 10px;
+overflow: hidden;
+}
 
 #content h1 {
     font-size: 24px;

@@ -68,6 +68,7 @@ p {
 	font-size:14px;
     line-height: 1.8;
     text-transform: initial;
+    word-break: keep-all;
 }
 img{border:none;max-width:100%; height:auto;}
 ul{
@@ -379,7 +380,18 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     margin: 35px 0 20px;
 }
 .single-how-works h2 a span {text-transform:  lowercase;}
-.single-how-works p {margin-bottom: 25px;text-transform: initial;}
+.single-how-works p {
+    margin-bottom: 25px;
+    height: 70px; /* 원하는 높이 설정 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 원하는 줄 수 */
+    overflow: hidden; /* 넘치는 텍스트 숨기기 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 ... 표시 */
+    word-wrap: break-word; /* 단어 단위로 줄바꿈 */
+    overflow-wrap: break-word; /* 긴 단어도 줄 바꿈을 허용 */
+    word-break: keep-all;
+}
 
 .welcome-hero-btn.how-work-btn {
     display: inline-block;

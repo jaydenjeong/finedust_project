@@ -341,7 +341,7 @@
 												<h3>몽골 기상데이터</h3>
 												<p><a href="https://data.kma.go.kr/data/ogd/selectGtsRltmList.do?pgmNo=658" target="_blank">출처 : 기상청자료개방포털</a></p>
 												<h3>중국 미세먼지데이터</h3>
-												<p><a href="https://aqicn.org/map/world/kr/" target="_blank">출처 : 세계 대기 질 지수 프로젝트</a></p>
+												<p><a href="https://aqicn.org/map/world/kr/" target="_blank">출처 : 세계 대기질 지수 프로젝트</a></p>
 											</div>
 										</div>
 									</div>
@@ -414,11 +414,11 @@
 								<div class="single-blog-item-txt">
 									<h2>Time Series Transformer</h2>
 									<p style="padding-top: 20px;">
-										트랜스포머 모델은 자연어 처리 및 시계열 예측에 사용되며, 입력 데이터 전처리, 멀티헤드 어텐션, 포지셔널 인코딩, 트랜스포머 블록, 출력층으로 구성됨. 
-멀티헤드 어텐션은 입력 시퀀스의 각 요소 간 관계를 계산해 최종 출력을 생성. 
-포지셔널 인코딩은 입력 시퀀스의 위치 정보를 포함하여 임베딩을 생성. 
-트랜스포머 블록은 멀티헤드 어텐션과 피드 포워드 신경망을 적용하며, 드롭아웃과 레이어 정규화로 과적합을 방지. 
-트랜스포머 모델은 인스턴스화하여 컴파일하고, 학습하고, 검증한 후에 평가 및 예측을 함.
+										트랜스포머 모델은 자연어 처리 및 시계열 예측에 사용되며, 입력 데이터 전처리, 멀티헤드 어텐션, 포지셔널 인코딩, 트랜스포머 블록, 출력층으로 구성되어 있다. 
+멀티헤드 어텐션은 입력 시퀀스의 각 요소 간 관계를 계산해 최종 출력을 생성한다. 
+포지셔널 인코딩은 입력 시퀀스의 위치 정보를 포함하여 임베딩을 생성한다. 
+트랜스포머 블록은 멀티헤드 어텐션과 피드 포워드 신경망을 적용하며, 드롭아웃과 레이어 정규화로 과적합을 방지한다. 
+트랜스포머 모델은 인스턴스화하여 컴파일하고, 학습하고, 검증한 후에 평가 및 예측을 한다.
 									</p>
 								</div>
 							</div>
@@ -432,7 +432,7 @@
 									<h2>3D CNN x LSTM</h2>
 									<p style="padding-top: 20px;">
 										3D CNN은 기본 구조로 CNN을 가지며, 특정 위치의 인접한 픽셀들이 서로 높은 상관관계를 가지고있고,
-										그렇지 않은 경우는 낮아지는 특성이 있다. 그러므로 시계열 데이터에서 공간 정보를 가진 정보를 찾는데 유용하다.
+										그렇지 않은 경우는 낮아지는 특성이 있다. 그러므로 시계열 데이터에서 공간 정보를 찾는데 유용하다.
 										LSTM은 장기간의 시계열 데이터를 처리하며, 순차적인 데이터 패턴을 찾는데 유리하다.
 										그렇기때문에 3D CNN으로 공간적인 정보를 추출하고, LSTM을 통하여 시간적 패턴을 모델링하여
 										복잡한 시공간 패턴을 파악할 수 있다.
@@ -463,9 +463,11 @@
 							<p>
 								중국의 미세먼지농도와 국내 미세먼지농도와의 관계 분석
 							</p>
-							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/finedust/'">
-								read more
-							</button>
+							<div>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/finedust/'">
+									read more
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-4">
@@ -475,11 +477,13 @@
 							</div>
 							<h2><a href="/analysis/weather/">기상분석</a></h2>
 							<p>
-								국내 기상데이터, 해양 기상데이터, 중국 기상데이터, 몽골 기상데이터 를 사용하여 미세먼지농도와의 관계 분석
+								국내 기상데이터, 해양 기상데이터, 중국 기상데이터, 몽골의 기상데이터 를 사용하여 미세먼지농도와의 관계 분석
 							</p>
-							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/weather/'">
-								read more
-							</button>
+							<div>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/weather/'">
+									read more
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-4">
@@ -491,9 +495,11 @@
 							<p>
 								국내 및 중국의 사회&경제 데이터, 주가데이터를 통하여 국내 미세먼지농도와 관계 분석
 							</p>
-							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/social_economy/'">
-								read more
-							</button>
+							<div>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/social_economy/'">
+									read more
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-4">
@@ -505,9 +511,11 @@
 							<p>
 								시간대별 변화하는 에어로졸 광학두께 이미지로 미세먼지농도 분석
 							</p>
-							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/aerosol/'">
-								read more
-							</button>
+							<div>
+								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/aerosol/'">
+									read more
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

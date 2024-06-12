@@ -1,46 +1,50 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>미세먼지 분석 페이지</title>
+    <!-- For favicon png / 웹브라우저 파비콘(탭 등에 사용되는 작은 아이콘) -->
+		<link rel="shortcut icon" type="image/icon" href="{% static 'logo/logo.jpg' %}"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/analysis_style.css' %}" >
+  </head>
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>미세먼지 분석 페이지</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="{% static 'css/dust_analysis_style.css' %}" >
-</head>
-<body>
-<!-- Begin Wrapper -->
-<div id="wrapper">
-  <!-- Begin Header -->
-  <div id="content" style = "height: 500px;"> 
-    <h1>시간대에 따른 미세먼지 농도 차이는?</h1>
-    <img src="{% static 'images/dust_analysis/timely.png' %}" width = 600px height = 400px style = "margin-left:150px;">
-    <p>시간대별 차이는 오전 시간대에 미세먼지 농도가 약 10% 적다.</p>
-  </div>
-  <div id="content"> 
-    <h1>요일별로 미세먼지 농도 차이가 있을까?</h1>
-    <img src="{% static 'images/dust_analysis/daily.png' %}" width = 600px height = 400px style = "margin-left:150px;">
-    <p>요일별 차이는 최대 5% 수준으로 크지 않은 것으로 보인다.</p>
-  </div>
-  <div id="content"> 
-    <h1>월별 미세먼지 농도 평균</h1>
-    <img src="{% static 'images/dust_analysis/monthly.png' %}" width = 600px height = 400px style = "margin-left:150px;">
-    <p>6 ~ 10월이 미세먼지 농도가 낮으며, 3 4월이 유독 높다.</p>
-  </div>
-  <div id="content">
-    <h1>연도별 미세먼지 농도 변화</h1>
-    <img src="{% static 'images/dust_analysis/yearly.png' %}" width = 600px height = 400px style = "margin-left:150px;">
-    <p>6 ~ 10월이 미세먼지 농도가 낮으며, 3 4월이 유독 높다.</p>
-  </div>    
-  <div id="ft">
-    <a href = "/#analysis">
-        <div id="footer">
-            <h2>Back To Main</h2>
-        </div>
-    </a>
-  </div>
-  <!-- End Footer -->
- </div>
-<!-- End Wrapper -->
-</body>
+  <body>
+    <!-- Begin Wrapper -->
+    <div id="wrapper">
+      <!-- Begin Header -->
+      <div id="header"><h1>미세먼지 분석 페이지</a></h1></div>
+      <!-- End Header -->
+      <div id="content" style = "height: 500px;"> 
+        <h1>시간대에 따른 미세먼지 농도 차이는?</h1>
+        <img src="{% static 'images/dust_analysis/timely.png' %}" width = 600px height = 400px style = "margin-left:150px;">
+        <p>시간대별 차이는 오전 시간대에 미세먼지 농도가 약 10% 적다.</p>
+      </div>
+      <div id="content"> 
+        <h1>요일별로 미세먼지 농도 차이가 있을까?</h1>
+        <img src="{% static 'images/dust_analysis/daily.png' %}" width = 600px height = 400px style = "margin-left:150px;">
+        <p>요일별 차이는 최대 5% 수준으로 크지 않은 것으로 보인다.</p>
+      </div>
+      <div id="content"> 
+        <h1>월별 미세먼지 농도 평균</h1>
+        <img src="{% static 'images/dust_analysis/monthly.png' %}" width = 600px height = 400px style = "margin-left:150px;">
+        <p>6 ~ 10월이 미세먼지 농도가 낮으며, 3 4월이 유독 높다.</p>
+      </div>
+      <div id="content">
+        <h1>연도별 미세먼지 농도 변화</h1>
+        <img src="{% static 'images/dust_analysis/yearly.png' %}" width = 600px height = 400px style = "margin-left:150px;">
+        <p>6 ~ 10월이 미세먼지 농도가 낮으며, 3 4월이 유독 높다.</p>
+      </div>    
+      <div id="ft">
+        <a href = "/#analysis">
+            <div id="footer">
+                <h2>Back To Main</h2>
+            </div>
+        </a>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <!-- End Wrapper -->
+  </body>
 </html>

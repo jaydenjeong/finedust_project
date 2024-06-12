@@ -1,52 +1,54 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>에어로졸 광학두께 이미지 분석 페이지</title>
+    <!-- For favicon png / 웹브라우저 파비콘(탭 등에 사용되는 작은 아이콘) -->
+		<link rel="shortcut icon" type="image/icon" href="{% static 'logo/logo.jpg' %}"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/analysis_style.css' %}" >
+  </head>
 
+  <body>
+    <!-- Begin Wrapper -->
+    <div id="wrapper">
+      <!-- Begin Header -->
+      <div id="header"><h1>에어로졸 광학두께 이미지 분석 페이지</a></h1></div>
+      <!-- End Header -->
+      <!-- Begin Content -->
+      <div id="content" style = "height: 200px;">
+        <h1>에어로졸이란?</h1>
+        <p>에어로졸(aerosol)은 대기 중에 있는 고체나 액체의 모든 입자를 말하며 미세먼지를 포함한다.</p> 
+        <p>자연적으로 발생하는 에어로졸로는 화산재, 바다에서 날아오는 소금 입자, 꽃가루 등이 있다.</p>
+        <p>인공적으로 발생하는 에어로졸로는 공장 배출 가스, 자동차 배기가스 등이 있다.</p>
+        <p>에어로졸은 기후 변화와 대기 오염, 인체 건강에 영향을 미칠 수 있다.</p>
+      </div>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>에어로졸 광학두께 이미지 분석 페이지</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="{% static 'css/aerosol_analysis_style.css' %}" >
-</head>
-<body>
-<!-- Begin Wrapper -->
-<div id="wrapper">
-  <!-- Begin Header -->
-  <div id="header"><h1>에어로졸 광학두께 이미지 분석 페이지</a></h1></div>
-  <!-- End Header -->
-  <!-- Begin Content -->
-  <div id="content" style = "height: 200px;">
-    <h1>에어로졸이란?</h1>
-    <p>에어로졸(aerosol)은 대기 중에 있는 고체나 액체의 모든 입자를 말하며 미세먼지를 포함한다.</p> 
-    <p>자연적으로 발생하는 에어로졸로는 화산재, 바다에서 날아오는 소금 입자, 꽃가루 등이 있다.</p>
-    <p>인공적으로 발생하는 에어로졸로는 공장 배출 가스, 자동차 배기가스 등이 있다.</p>
-    <p>에어로졸은 기후 변화와 대기 오염, 인체 건강에 영향을 미칠 수 있다.</p>
-  </div>
-
-  <div id="content" style = "height: 650px;"> 
-    <h1>에어로졸 광학두께란?</h1>
-    <div id="image-container">
-      <img src="{% static 'images/analysis/aerosol_sample_img.png' %}" alt="aerosol sample", style="border-radius: 10px; width: 500px; height: 350px;">
-      <h5>이미지 출처: 국립환경위성센터</h5>
-    </div>
-  </br>
-    <p>에어로졸 광학두께(Aerosol Optical Depth)는 대기 중 에어로졸 입자의 밀도를 나타내는 측정 지표로,</p>
-    <p>태양광이 대기를 통과할 때 에어로졸 입자에 의해 산란되거나 흡수되는 정도를 나타낸다.</p> 
-    <p>AOD 값이 높을수록 대기 중 에어로졸 입자가 많다는 것을 의미함.</p>
-    <p>0에 가까운 값: 대기 중에 에어로졸 입자가 거의 없다는 것을 의미. 맑은 하늘에서 주로 관찰됨.</p>
-    <p>1 이상의 값: 대기 중에 에어로졸 입자가 매우 많음을 의미. 이는 심한 대기 오염이나 황사, 화산 폭발 등의 상황에서 주로 관찰됨.</p>
-  </div> 
-  <!-- End Content -->
-  <!-- Start Footer -->
-  <div id="ft">
-    <a href = "/#analysis">
-        <div id="footer">
-            <h2>Back To Main</h2>
+      <div id="content" style = "height: 650px;"> 
+        <h1>에어로졸 광학두께란?</h1>
+        <div id="image-container">
+          <img src="{% static 'images/analysis/aerosol_sample_img.png' %}" alt="aerosol sample", style="border-radius: 10px; width: 500px; height: 350px;">
+          <h5>이미지 출처: 국립환경위성센터</h5>
         </div>
-    </a>
-  </div>
-  <!-- End Footer -->
- </div>
-<!-- End Wrapper -->
-</body>
+      </br>
+        <p>에어로졸 광학두께(Aerosol Optical Depth)는 대기 중 에어로졸 입자의 밀도를 나타내는 측정 지표로,</p>
+        <p>태양광이 대기를 통과할 때 에어로졸 입자에 의해 산란되거나 흡수되는 정도를 나타낸다.</p> 
+        <p>AOD 값이 높을수록 대기 중 에어로졸 입자가 많다는 것을 의미함.</p>
+        <p>0에 가까운 값: 대기 중에 에어로졸 입자가 거의 없다는 것을 의미. 맑은 하늘에서 주로 관찰됨.</p>
+        <p>1 이상의 값: 대기 중에 에어로졸 입자가 매우 많음을 의미. 이는 심한 대기 오염이나 황사, 화산 폭발 등의 상황에서 주로 관찰됨.</p>
+      </div> 
+      <!-- End Content -->
+      <!-- Start Footer -->
+      <div id="ft">
+        <a href = "/#analysis">
+            <div id="footer">
+                <h2>Back To Main</h2>
+            </div>
+        </a>
+      </div>
+      <!-- End Footer -->
+    </div>
+    <!-- End Wrapper -->
+  </body>
 </html>
