@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 
     <head>
         <meta charset="utf-8">
@@ -44,8 +44,9 @@
 			                    <li class="scroll"><a href="#predict">Predict</a></li>
 			                    <li class="scroll"><a href="#data">Data</a></li>
 			                    <li class="scroll"><a href="#model">Model</a></li>
+								<li class="scroll"><a href="#analysis">Analysis</a></li>
 								<!-- 분석부분 드롭다운 영역 -->
-								<li class="dropdown">
+								<!-- <li class="dropdown">
 									<a href="#analysis" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Analysis</a>
 									<ul class="dropdown-menu">
 										<li><a href="/analysis/finedust/">Finedust</a></li>
@@ -53,7 +54,7 @@
 										<li ><a href="/analysis/social_economy/">Social/Economy</a></li>
 										<li ><a href="/analysis/aerosol/">Aerosol</a></li>
 									</ul>
-								</li>
+								</li> -->
 								<!-- 분석부분 드롭다운 영역 End -->
 			                </ul>
 			            </div>
@@ -78,7 +79,7 @@
 						<h2 style="display: inline;">THANK YOU</h2>
 						<h2>AND YOU?</h2>
 					</div>
-					<p>Korea Fine Dust Predict with FineDust, Weather, Social&Economy data</p>
+					<p>Korea FineDust Predict with FineDust, Weather, Social&Economy data</p>
 				</div>
 			</div>
 			<div class="home-txt">
@@ -117,7 +118,7 @@
 											<button type="submit", name="loc", value="105">
 												<div class="single-list-topics-content">
 													<div class="img-content"><img src="assets/logo/Gangneung_logo.png" width = 40px height = 40px></div>
-													<div class="h-content"><h2>Gangwon-do</h2></div>
+													<div class="h-content"><h2>Gangneung</h2></div>
 												</div>
 											</button>
 										</li>
@@ -126,7 +127,7 @@
 											<button type="submit", name="loc", value="133">
 												<div class="single-list-topics-content">
 													<div class="img-content"><img src="assets/logo/Daejeon_logo.png" width = 40px height = 40px></div>
-													<div class="h-content"><h2>Chungcheong-do</h2></div>
+													<div class="h-content"><h2>Daejeon</h2></div>
 												</div>
 											</button>
 										</li>
@@ -135,7 +136,7 @@
 											<button type="submit", name="loc", value="156">
 												<div class="single-list-topics-content">
 													<div class="img-content"><img src="assets/logo/Gwangju_logo.png" width = 40px height = 40px></div>
-													<div class="h-content"><h2>Jeolla-do</h2></div>
+													<div class="h-content"><h2>Gwangju</h2></div>
 												</div>
 											</button>
 										</li>
@@ -144,7 +145,7 @@
 											<button type="submit", name="loc", value="159">
 												<div class="single-list-topics-content">
 													<div class="img-content"><img src="assets/logo/Busan_logo.png" width = 40px height = 40px></div>
-													<div class="h-content"><h2>Gyeongsang-do</h2></div>
+													<div class="h-content"><h2>Busan</h2></div>
 												</div>
 											</button>
 										</li>
@@ -152,22 +153,21 @@
 								</ul>
 							</div>
 						</div>
-						<!-- 지역선택 버튼과 예측값 출력부분의 경계 -->
-						<div style="padding-bottom: 70px;"></div>
-					</div><!--/.container-->
-				</section><!--/.list-topics-->
-				<!--list-topics end-->
-			</div><!--/.container-->
-		</section><!--/.works-->
-		
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<!-- 지역선택 버튼과 예측값 출력부분의 경계 -->
+		<div style="padding-bottom: 70px;"></div>
+
 		<!-- 3일간의 날씨정보 전달 -->
 		<section id="explore" class="explore">
 			<div class="container" style="width: 1600px;">
-			<!-- <div style="padding: 10px 200px;"> -->
 				<div class="explore-content">
 					<div class="row">
 						<div class="col-md-4 col-sm-6">
-							<h2 style="padding-bottom: 20px;">Today</h2>
+							<h2 style="padding-bottom: 20px;">{{ li.0|date:"Y-m-d D" }}</h2>
 							<div class="single-explore-item">
 								<div class="row" style="margin: 5px 10px 5px 5px;">
 									<div style="padding-bottom: 20px;">
@@ -209,7 +209,7 @@
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
-							<h2 style="padding-bottom: 20px;">Tomorrow</h2>
+							<h2 style="padding-bottom: 20px;">{{ li.1|date:"Y-m-d D" }}</h2>
 							<div class="single-explore-item">
 								<div class="row" style="margin: 5px 10px 5px 5px;">
 									<div style="padding-bottom: 20px;">
@@ -249,7 +249,7 @@
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
-							<h2 style="padding-bottom: 20px;">Day After Tomorrow</h2>
+							<h2 style="padding-bottom: 20px;">{{ li.2|date:"Y-m-d D" }}</h2>
 							<div class="single-explore-item">
 								<div class="row" style="margin: 5px 10px 5px 5px;">
 									<div style="padding-bottom: 20px;">
@@ -351,7 +351,7 @@
 						<div class="col-md-3 col-sm-4">
 							<div class="single-data-item">
 								<div>
-									<img src="assets/images/data/society_economy.gif" alt="explore image" class="single-explore-img">
+									<img src="assets/images/data/society_economy3.gif" alt="explore image" class="single-explore-img">
 								</div>
 								<div class="single-explore-txt">
 									<h2>사회 & 경제 데이터</h2>
@@ -361,10 +361,12 @@
 												<div style="padding-top: 10px;"></div>
 												<h3>국내 & 중국 주가 지수</h3>
 												<p><a href="https://kr.investing.com/indices/major-indices" target="_blank">출처 : Investing</a></p>
-												<h3>국내 사회 & 경제 데이터</h3>
-												<p><a href="#" target="_blank">출처 : </a></p>
-												<h3>중국 사회 & 경제 데이터</h3>
-												<p><a href="#" target="_blank">출처 : </a></p>
+												<h3>국내 사회&경제 데이터</h3>
+												<p><a href="https://bigdata.kepco.co.kr/cmsmain.do?scode=S01&pcode=000167&pstate=L&redirect=Y" target="_blank">출처 : 에너지마켓플레이스</a></p>
+												<p><a href="https://www.opinet.co.kr/user/dopospdrg/dopOsPdrgAreaView.do" target="_blank">출처 : Opinet</a></p>
+												<p><a href="https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1F02001&vw_cd=MT_ZTITLE&list_id=&scrId=&seqNo=&lang_mode=ko&obj_var_id=&itm_id=&conn_path=B1&path=%252Fvisual%252FnsportalStats%252FdetailContents.do" target="_blank">출처 : KOSIS</a></p>
+												<h3>중국 사회&경제 데이터</h3>
+												<p><a href="https://data.stats.gov.cn/english/easyquery.htm?cn=A01" target="_blank">출처 : National Data</a></p>
 											</div>
 										</div>
 									</div>
@@ -374,7 +376,7 @@
 						<div class="col-md-3 col-sm-4">
 							<div class="single-data-item">
 								<div>
-									<img src="assets/images/data/aerosol.gif" alt="explore image" class="single-explore-img">
+									<img src="assets/images/data/aerosol2.gif" alt="explore image" class="single-explore-img">
 								</div>
 								<div class="single-explore-txt">
 									<h2>에어로졸 데이터</h2>
@@ -454,11 +456,11 @@ LSTM의 게이트 연산에 CNN을 결합하여 시공간 및 공간적 특성�
 					<div class="col-md-3 col-sm-4">
 						<div class="single-how-works">
 							<div>
-								<i><img src="assets/images/analysis/finedust.png" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+								<img src="assets/images/analysis/finedust.png" class="single-how-works-img">
 							</div>
 							<h2><a href="/analysis/finedust/">미세먼지분석</a></h2>
 							<p>
-								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+								중국의 미세먼지농도와 국내 미세먼지농도와의 관계 분석
 							</p>
 							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/finedust/'">
 								read more
@@ -468,11 +470,11 @@ LSTM의 게이트 연산에 CNN을 결합하여 시공간 및 공간적 특성�
 					<div class="col-md-3 col-sm-4">
 						<div class="single-how-works">
 							<div>
-								<i><img src="assets/images/analysis/weather.png" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+								<img src="assets/images/analysis/weather.png" class="single-how-works-img">
 							</div>
-							<h2><a href="/analysis/weather/"> 기상분석</a></h2>
+							<h2><a href="/analysis/weather/">기상분석</a></h2>
 							<p>
-								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+								국내 기상데이터, 해양 기상데이터, 중국 기상데이터, 몽골 기상데이터 를 사용하여 미세먼지농도와의 관계 분석
 							</p>
 							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/weather/'">
 								read more
@@ -482,11 +484,11 @@ LSTM의 게이트 연산에 CNN을 결합하여 시공간 및 공간적 특성�
 					<div class="col-md-3 col-sm-4">
 						<div class="single-how-works">
 							<div>
-								<i><img src="assets/images/analysis/society_economy.gif" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+								<img src="assets/images/analysis/society_economy.gif" class="single-how-works-img">
 							</div>
 							<h2><a href="/analysis/social_economy/">경제 & 사회 분석</a></h2>
 							<p>
-								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+								국내 및 중국의 사회&경제 데이터, 주가데이터를 통하여 국내 미세먼지농도와 관계 분석
 							</p>
 							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/social_economy/'">
 								read more
@@ -496,11 +498,11 @@ LSTM의 게이트 연산에 CNN을 결합하여 시공간 및 공간적 특성�
 					<div class="col-md-3 col-sm-4">
 						<div class="single-how-works">
 							<div>
-								<i><img src="assets/images/analysis/aerosol.gif" style="border-radius: 10px; width: 300px; height: 200px;"></i>
+								<img src="assets/images/analysis/aerosol.gif" class="single-how-works-img">
 							</div>
 							<h2><a href="/analysis/aerosol/">에어로졸 광학두께 이미지 분석</a></h2>
 							<p>
-								Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
+								시간대별 변화하는 에어로졸 광학두께 이미지로 미세먼지농도 분석
 							</p>
 							<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='/analysis/aerosol/'">
 								read more
