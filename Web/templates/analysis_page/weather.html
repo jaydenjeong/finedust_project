@@ -18,10 +18,22 @@
   <div id="content"> 기상 분석 </div>
   <!-- End Content -->
   <!-- Begin Footer -->
-  <div id="content"> 미세먼지에 가장 영향력이 큰 피처는?(풍향/풍속) </div>
   <div id="content"> 며칠 전까지의 데이터가 유효했는지? (5.5 ~ 6.5일) + 논문 소개 내용</div>
-  <div id="content"> - 강수량의 영향이 적음 </div>    
-  <div id="content"> - 기압의 영향력이 큼 </div>    
+  <div id="content"> 미세먼지에 가장 영향력이 큰 피처는?(풍향/풍속) </div>
+  <!-- <div id="content", style="display: flex; align-items: center;"> 
+    <h1>강수량의 영향이 크다</h1>
+    <img src="{% static 'images/weather_analysis/percipitation.png' %}" width = 600px height = 300px>
+    <div>
+      <p>각 월별로 강수량</p>
+    </div>
+  </div> -->
+  <div id="content" style="display: flex; align-items: flex-start;">
+    <h1 style="margin-right: 20px;">강수량의 영향이 크다</h1>
+    <div style="display: flex; flex-direction: column;">
+        <img src="{% static 'images/weather_analysis/percipitation.png' %}" width="600px" height="300px" style="margin-bottom: 10px;">
+        <p>각 월별로 강수량</p>
+    </div>
+  </div>
   <div id="ft">
     <a href = "/#analysis">
         <div id="footer">
