@@ -405,9 +405,9 @@
 				<div class="blog-content">
 					<div class="row">
 						<div class="col-md-6 col-sm-8">
-							<div class="single-blog-item">
+							<div class="single-blog-item" style = "height: 650px;">
 								<div class="single-blog-item-img" style="display: flex; justify-content: center; align-items: center; padding-top: 20px;">
-									<img src="assets/images/model/transformer.png" alt="Transformer image" style="width: 300px; height: 200px;">
+									<img src="assets/images/model/transformer.png" alt="Transformer image" style="border-radius: 10px; width: 400px; height: 300px;">
 								</div>
 								<div class="single-blog-item-txt">
 									<h2>Time Series Transformer</h2>
@@ -421,18 +421,19 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 col-sm-8">
-							<div class="single-blog-item">
+						<div class="col-md-6 col-sm-8" >
+							<div class="single-blog-item" style = "height: 650px;">
 								<div class="single-blog-item-img" style="display: flex; justify-content: center; align-items: center; padding-top: 20px;">
-									<img src="assets/images/model/convlstm.png" alt="ConvLSTM image" style="width: 300px; height: 200px;">
+									<img src="assets/images/model/3DCNN_LSTM.png" alt="3DCNN_LSTM image" style="border-radius: 10px; width: 500px; height: 300px;">
 								</div>
 								<div class="single-blog-item-txt">
-									<h2>ConvLSTM</h2>
+									<h2>3D CNN x LSTM</h2>
 									<p style="padding-top: 20px;">
-										ConvLSTM은 LSTM 네트워크와 CNN 특성을 결합한 아키텍처로, 비디오 데이터, 시공간 데이터, 기상 예측 등에 사용됨.
-LSTM의 게이트 연산에 CNN을 결합하여 시공간 및 공간적 특성을 동시에 학습함. 이 모델은 시간적 및 공간적 특성을 동시에 학습할 수 있어 시공간 데이터 처리에 적합.
-입력 데이터 형식은 이미지 데이터의 경우 (batch_size, time_steps, height, width, channels), 시계열 데이터의 경우 (batch_size, input_steps, feature_dim). 
-출력은 일반적으로 (batch_size, output_steps) 형태로 구성되어 있음.
+										3D CNN은 기본 구조로 CNN을 가지며, 특정 위치의 인접한 픽셀들이 서로 높은 상관관계를 가지고있고,
+										그렇지 않은 경우는 낮아지는 특성이 있다. 그러므로 시계열 데이터에서 공간 정보를 가진 정보를 찾는데 유용하다.
+										LSTM은 장기간의 시계열 데이터를 처리하며, 순차적인 데이터 패턴을 찾는데 유리하다.
+										그렇기때문에 3D CNN으로 공간적인 정보를 추출하고, LSTM을 통하여 시간적 패턴을 모델링하여
+										복잡한 시공간 패턴을 파악할 수 있다.
 									</p>
 								</div>
 							</div>
