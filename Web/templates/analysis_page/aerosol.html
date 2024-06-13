@@ -24,7 +24,6 @@
         <p>인공적으로 발생하는 에어로졸로는 공장 배출 가스, 자동차 배기가스 등이 있다.</p>
         <p>에어로졸은 기후 변화와 대기 오염, 인체 건강에 영향을 미칠 수 있다.</p>
       </div>
-
       <div id="content" style = "height: 650px;"> 
         <h1>에어로졸 광학두께란?</h1>
         <div id="image-container">
@@ -34,10 +33,44 @@
       </br>
         <p>에어로졸 광학두께(Aerosol Optical Depth)는 대기 중 에어로졸 입자의 밀도를 나타내는 측정 지표로,</p>
         <p>태양광이 대기를 통과할 때 에어로졸 입자에 의해 산란되거나 흡수되는 정도를 나타낸다.</p> 
-        <p>AOD 값이 높을수록 대기 중 에어로졸 입자가 많다는 것을 의미함.</p>
-        <p>0에 가까운 값: 대기 중에 에어로졸 입자가 거의 없다는 것을 의미. 맑은 하늘에서 주로 관찰됨.</p>
-        <p>1 이상의 값: 대기 중에 에어로졸 입자가 매우 많음을 의미. 이는 심한 대기 오염이나 황사, 화산 폭발 등의 상황에서 주로 관찰됨.</p>
+        <p>AOD 값이 높을수록 대기 중 에어로졸 입자가 많다는 것을 의미한다.</p>
+        <p>0에 가까운 값: 대기 중에 에어로졸 입자가 거의 없다는 것을 의미하며, 주로 맑은 하늘에서 관찰된다.</p>
+        <p>1 이상의 값: 대기 중에 에어로졸 입자가 매우 많음을 의미하며, 이는 심한 대기 오염이나 황사, 화산 폭발 등의 상황에서 주로 관찰된다.</p>
       </div> 
+      <div id="content" style = "height: 1500px;">
+        <h1>미세먼지와 광학두께의 관계분석</h1>
+        <h3 style = "text-align: center;">2023년04월13일과 2023년4월14일의 에어로졸 이미지</h3>
+      </br>
+        <div id="image-container">
+          <img src="{% static 'images/aerosol_analysis/20230413에어로졸.png' %}" alt="20230413 aerosol", style="border-radius: 10px; width: 400px; height: 300px; margin-right: 20px; margin-left:15px;">
+          <img src="{% static 'images/aerosol_analysis/20230414에어로졸.png' %}" alt="20230414 aerosol", style="border-radius: 10px; width: 400px; height: 300px; margin-right: 20px; margin-left:15px;">
+        </div>
+      </br>  
+        <h3 style = "text-align: center;">2023년04월13일과 2023년4월14일의 국내미세먼지농도(㎍/m³)</h3>
+      </br>
+        <div id="image-container"> 
+          <img src="{% static 'images/aerosol_analysis/20230413국내미세먼지.png' %}" alt="20230413 pm10", style="border-radius: 10px; width: 400px; height: 200px; margin-right: 20px; margin-left:15px;">
+          <img src="{% static 'images/aerosol_analysis/20230414국내미세먼지.png' %}" alt="20230414 pm10", style="border-radius: 10px; width: 400px; height: 200px; margin-right: 20px; margin-left:15px;">
+        </div>
+        <p style="word-break: keep-all;"> 주로 미세먼지가 심한 봄철에는 AOD농도가 높은 날이 많이 보이는 추세이다. AOD 농도가 미세먼지와 관련이 있는지 확인하기위하여 AOD가 진한 날과, 진하지 않은날의
+            미세먼지 농도를 비교해보았다. AOD 농도가 진한 날(23/4/13)의 미세먼지농도가 AOD 농도가 옅은 날(23/4/14)보다 높은 것으로 확인되었다.
+        </p>
+        </br>
+        <h3 style = "text-align: center;">2023년 07월 04일 에어로졸이미지와 국내미세먼지농도(㎍/m³)</h3>
+       </br>
+        <div id="image-container">
+          <img src="{% static 'images/aerosol_analysis/20230704에어로졸.png' %}" alt="20230704 aerosol", style="border-radius: 10px; width: 500px; height: 350px;"></br>
+          </br>
+          <img src="{% static 'images/aerosol_analysis/20230704국내미세먼지.png' %}" alt="20230704 pm10", style="border-radius: 10px; width: 400px; height: 200px; margin-right: 20px; margin-left:15px;">
+        </div>
+        <p style="word-break: keep-all;"> 미세먼지 농도가 대체적으로 낮은 여름철의 에어로졸 이미지를 분석해보았다.
+          다른 계절에 비해 평균적으로 에어로졸 농도가 낮은 경향을 보였으며, 이는 태풍이나 비와같은 다른 기상 요인으로인한
+          것으로 보인다. 하지만, 위의 이미지에는 강원쪽 부근에 에어로졸농도가 살짝 나타나는 것으로 보이며,
+          이로 인해 강원도 미세먼지 농도가 다른 지역보다 높은 것으로 보인다.
+        </p>
+
+      </div>
+
       <!-- End Content -->
       <!-- Start Footer -->
       <div id="ft">
