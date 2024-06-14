@@ -444,6 +444,63 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     transition: .3s linear;
 }
 
+.text-center {
+    text-align: center;
+}
+
+/* 기본 이미지 크기 */
+img.responsive-img {
+    width: 20px;
+    height: 20px;
+}
+
+.text-center h1{
+    font-size: 100%; /* 기본값 설정 */
+}
+
+/* 화면이 800px 이상일 때 */
+@media (min-width: 900px) {
+    .text-center h1 {
+        font-size: 50%; /* 최소값 설정 */
+        margin: 0;
+        color:#a09e9c;
+        font-weight: 300;
+        padding-top: 10px;
+    }
+    img.responsive-img {
+        width: 10px;
+        height: 10px;
+    }
+} 
+/* 화면이 1200px 이상일 때 */
+@media (min-width: 1200px) {
+    .text-center h1 {
+        font-size: 75%; /* 중간값 설정 */
+        margin: 0;
+        color:#a09e9c;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+    img.responsive-img {
+        width: 15px;
+        height: 15px;
+    }
+}
+/* 화면이 1600px 이상일 때 */
+@media (min-width: 1500px) {
+    .text-center h1 {
+        padding-top: 10px;
+        font-size: 100%; /* 최대값 설정 */
+        margin: 0;
+        color:#a09e9c;
+        font-weight: 500;
+    }
+    img.responsive-img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 .single-data-item {
     background: #fff;
     border: 1px solid #edeff1;
